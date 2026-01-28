@@ -3,72 +3,72 @@ package main.java.com.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculatorTest {
+class CalculatorTest {
 
-    private Calculator calculator = new Calculator();
+    private final Calculator calculator = new Calculator();
 
     @Test
-    public void testAddOperation() {
+    void testAddition() {
         assertEquals(15, calculator.calculate(10, 5, "add"));
     }
 
     @Test
-    public void testAddAgainOperation() {
+    void testAddAgain() {
         assertEquals(15, calculator.calculate(10, 5, "add-again"));
     }
 
     @Test
-    public void testSubOperation() {
+    void testSubtraction() {
         assertEquals(5, calculator.calculate(10, 5, "sub"));
     }
 
     @Test
-    public void testSubAgainOperation() {
+    void testSubAgain() {
         assertEquals(5, calculator.calculate(10, 5, "sub-again"));
     }
 
     @Test
-    public void testMulOperation() {
+    void testMultiplication() {
         assertEquals(50, calculator.calculate(10, 5, "mul"));
     }
 
     @Test
-    public void testDivOperation() {
+    void testDivision() {
         assertEquals(2, calculator.calculate(10, 5, "div"));
     }
 
     @Test
-    public void testDivByZero() {
+    void testDivisionByZero() {
         assertEquals(0, calculator.calculate(10, 0, "div"));
     }
 
     @Test
-    public void testModOperation() {
+    void testModulo() {
         assertEquals(0, calculator.calculate(10, 5, "mod"));
     }
 
     @Test
-    public void testPowOperation() {
+    void testPower() {
         assertEquals(100, calculator.calculate(10, 2, "pow"));
     }
 
     @Test
-    public void testInvalidOperation() {
+    void testInvalidOperation() {
         assertEquals(0, calculator.calculate(10, 5, "invalid"));
     }
 
     @Test
-    public void testAddNumbers() {
+    void testAddNumbers() {
         assertEquals(15, calculator.addNumbers(10, 5));
     }
 
     @Test
-    public void testSumValues() {
-        assertEquals(20, calculator.sumValues(10, 10));
+    void testSumValues() {
+        assertEquals(15, calculator.sumValues(10, 5));
     }
 
     @Test
-    public void testAddAgain() {
-        assertEquals(7, calculator.addAgain(3, 4));
+    void testAddAgainMethod() {
+        assertEquals(15, calculator.addAgain(10, 5));
     }
 }
